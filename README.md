@@ -1,4 +1,4 @@
-## 环境信息
+## Environment
 
 ```
 GPU RTX 3090(24GB) * 1
@@ -9,24 +9,24 @@ pip=22.3.1
 
 
 
-## 代码使用
+## Usage
 
 ```python
-# 安装依赖
+# Install dependencies
 conda env create -f environment.yml / 
 pip install -r requirements.txt
 
-# Proto-CSNet训练及推理方法
+# Train and test Proto-CSNet
 python mix_test.py
 
 
 '''
-部分对比方法
+Baseline Comparisons
 '''
-# 孪生网络+CNN模型
+# Siamese Network+CNN
 python baseline.py
 
-#孪生网络+ResNet12
+# Siamese Network+ResNet12
 python siam_resnet.py
 
 # ProtoNet+CNN
@@ -39,7 +39,7 @@ python protonet_resnet.py
 
 
 
-## Proto-CSNet介绍
+## Proto-CSNet Introduction
 
 ### Overview
 With the emergence of the 5.5G era, **Integrated Sensing and Communication (ISAC)** has demonstrated powerful high-precision sensing capabilities in various application domains, including wireless communications, intelligent transportation, and smart homes. In the field of human activity recognition, researchers are actively exploring the feasibility and convenience of using **Channel State Information (CSI)** extracted from Wi-Fi signals to detect and classify human actions.
