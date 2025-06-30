@@ -57,13 +57,13 @@ Extensive experiments validate the effectiveness of our method. We collect a CSI
 - **Proto-CSNet** consistently outperforms existing CSI-based activity recognition methods
 
 
-### 模型结构：
+### Model Structure：
 
 ![image-20250627205545775](README.assets/image-20250627205545775.png)
 
 
 
-## 论文地址：
+## Paper Link：
 
 [Proto-CSNet:](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11036372)
 
