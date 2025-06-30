@@ -41,20 +41,20 @@ python protonet_resnet.py
 
 ## Proto-CSNet介绍
 
-### 摘要：
+### Overview
+With the emergence of the 5.5G era, **Integrated Sensing and Communication (ISAC)** has demonstrated powerful high-precision sensing capabilities in various application domains, including wireless communications, intelligent transportation, and smart homes. In the field of human activity recognition, researchers are actively exploring the feasibility and convenience of using **Channel State Information (CSI)** extracted from Wi-Fi signals to detect and classify human actions.
 
-随着5.5G时代的来临，通感一体化技术(Integrated sensing and communication, ISAC)在无线通信、智慧交通、智能家居等领域展现出其高精度感知功能。特别是在人体活动识别领域，研究者正探索利用WIFI信号中的信道状态信息（CSI）进行人体活动识别的可行性和便利性。然而，当前研究多依赖于复杂的网络模型来处理海量的CSI数据，以期构建高精度的检测模型。面对时间敏感的任务，研究面临着样本数量受限和对问题解决时效性要求严格的双重挑战。
+However, existing work often relies on complex and heavyweight neural network architectures to process large volumes of CSI data in pursuit of high recognition accuracy. This creates significant challenges in time-sensitive scenarios, where researchers must deal with both **limited training samples** and the demand for **efficient and timely responses**.
 
-为了解决上述问题，我们在本篇论文中提出了一种基于融合cnn和self-attention的原型网络模型，namely Proto-CSNet. 
+To address these issues, we propose **Proto-CSNet**, a **prototypical network model** enhanced with **CNN and self-attention mechanisms**. Our contributions are threefold:
+1. We first apply **time-frequency transformations and filtering** to convert the CSI data from the time domain to the frequency domain. Outliers and noise are removed to improve the ability to distinguish between similar activities.
+2. We then build a **customized feature extraction module** based on the ACmix model, preserving the local feature extraction power of CNNs and the global modeling strength of self-attention mechanisms.
+3. Finally, we integrate this module with a CNN backbone and embed it within a **meta-learning framework** using prototypical networks to support few-shot learning tasks.
 
-首先，我们对数据进行时频变换和滤波处理，将数据从时域转换至频域，并除去样本中的异常值和噪声，以提高相似动作间识别的准确性。
-
-然后，基于ACmix模型，我们在保留融合CNN的局部特征捕捉能力和Self-Attention的全局信息处理优势的同时，调整并构建了一个新的自定义的特征提取模块。
-
-最后，我们将所构建的自定义模块与卷积神经网络相串联，并将其融合至元学习思想的原型网络中。
-
-大量实验结果表明， Proto-CSNet优于现有研究算法，从而验证了其有效性。为验证本论文方法的有效性，我们收集了两个真实场景下的11种人体活动数据集进行大量的实验。实验结果显示，我们的方法在多个方面优于现有算法：（1）模型推理的精度超过了95%；（2）显著提高了模型训练和推理的速度。
-
+Extensive experiments validate the effectiveness of our method. We collect a CSI dataset covering **11 types of human activities** in **two real-world environments** and conduct thorough evaluations. The results show that:
+- The inference accuracy exceeds **95%**
+- The model achieves significantly faster **training and inference**
+- **Proto-CSNet** consistently outperforms existing CSI-based activity recognition methods
 
 
 ### 模型结构：
@@ -73,10 +73,7 @@ python protonet_resnet.py
   booktitle={2024 20th International Conference on Mobility, Sensing and Networking (MSN)}, 
   title={Proto-CSNet: A Prototype Network Model Integrating CNN and Self-Attention for Enhanced Human Activity Recognition}, 
   year={2024},
-  volume={},
-  number={},
   pages={48-56},
-  keywords={Wireless communication;Adaptation models;Accuracy;Prototypes;Feature extraction;Integrated sensing and communication;Data models;Human activity recognition;Wireless fidelity;Tuning;CSI;human activity recognition;self-attention;prototype network},
   doi={10.1109/MSN63567.2024.00018}}
 
 ```
